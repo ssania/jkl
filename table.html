@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        .row1{
+            text-align: center;
+            padding:10px;
+        }
+        #table1{
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .txt{
+            text-align: center;
+        }
+       
+    </style>
+    
+</head>
+<body>
+    
+    <div>
+        <div class="txt">
+        <button  onclick="myfunction()">Click me to see the table</button>
+        </div>
+        <br>
+        <div id="table"></div>
+    </div>
+   
+
+    <script>
+        const a=["Anakin","Obi-Wan","Luke","Leia"]
+
+        function myfunction(){
+        let table="<table border=2 width=25% id='table1'>";
+            for(let i=0,j=1;i<a.length,j<=4;i++,j++){
+                table+="<tr class='row1'><td class='row1'>"+ j +"</td><td class='row1'>"+ a[i] +"</td></tr>";
+            }
+            table+="</table>";
+            document.getElementById("table").innerHTML=table;
+        }
+
+    </script>
+    
+</body>
+</html>
